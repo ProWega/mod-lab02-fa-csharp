@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "nfBTw66nIAttb+VRpJPh+yrSB4CH4WmHmc20yS0np0UrsjfL6bpGOmrYYRNtJteMzZChukxIrKeICZGiaMcEmQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\танюк\\2\\mod-lab02-fa-csharp\\fa\\fa.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -16,3 +16,4 @@ C:\Users\Admin\source\repos\танюк\2\mod-lab02-fa-csharp\fa\obj\Debug\netsta
 C:\Users\Admin\source\repos\танюк\2\mod-lab02-fa-csharp\fa\obj\Debug\netstandard2.0\fa.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\танюк\2\mod-lab02-fa-csharp\fa\obj\Debug\netstandard2.0\fa.dll
 C:\Users\Admin\source\repos\танюк\2\mod-lab02-fa-csharp\fa\obj\Debug\netstandard2.0\fa.pdb
+C:\Users\Admin\source\repos\танюк\2\mod-lab02-fa-csharp\fa\obj\Debug\netstandard2.0\fa.sourcelink.json

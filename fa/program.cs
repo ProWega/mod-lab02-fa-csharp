@@ -14,62 +14,53 @@ namespace fans
     }
 
     public class FA1
+{
+    public State q0 = new State()
     {
-        public State q0 = new State()
-        {
-            Name = "q0",
-            IsAcceptState = false,
-            Transitions = new Dictionary<char, State>()
-        };
-        public State q1 = new State()
-        {
-            Name = "q1",
-            IsAcceptState = true,
-            Transitions = new Dictionary<char, State>()
-        };
-        public State q2 = new State()
-        {
-            Name = "q2",
-            IsAcceptState = false,
-            Transitions = new Dictionary<char, State>()
-        };
-        public State q3 = new State()
-        {
-            Name = "q3",
-            IsAcceptState = false,
-            Transitions = new Dictionary<char, State>()
-        };
+        Name = "q0",
+        IsAcceptState = false,
+        Transitions = new Dictionary<char, State>()
+    };
+    public State q1 = new State()
+    {
+        Name = "q1",
+        IsAcceptState = true,
+        Transitions = new Dictionary<char, State>()
+    };
+    public State q2 = new State()
+    {
+        Name = "q2",
+        IsAcceptState = false,
+        Transitions = new Dictionary<char, State>()
+    };
 
-        State InitialState;
+    State InitialState;
 
-        public FA1()
-        {
-            InitialState = q0;
+    public FA1()
+    {
+        InitialState = q0;
 
-            q0.Transitions['0'] = q3;
-            q0.Transitions['1'] = q0;
+        q0.Transitions['0'] = q1;
+        q0.Transitions['1'] = q0;
 
-            q3.Transitions['0'] = q2;
-            q3.Transitions['1'] = q1;
+        q1.Transitions['0'] = q2;
+        q1.Transitions['1'] = q1;
 
-            q1.Transitions['0'] = q2;
-            q1.Transitions['1'] = q1;
-
-            q2.Transitions['0'] = q2;
-            q2.Transitions['1'] = q2;
-        }
-
-        public bool? Run(IEnumerable<char> s)
-        {
-            State current = InitialState;
-            foreach (var c in s)
-            {
-                if (!current.Transitions.ContainsKey(c)) return null;
-                current = current.Transitions[c];
-            }
-            return current.IsAcceptState;
-        }
+        q2.Transitions['0'] = q2;
+        q2.Transitions['1'] = q2;
     }
+
+    public bool? Run(IEnumerable<char> s)
+    {
+        State current = InitialState;
+        foreach (var c in s)
+        {
+            if (!current.Transitions.ContainsKey(c)) return null;
+            current = current.Transitions[c];
+        }
+        return current.IsAcceptState;
+    }
+}
 
 
     public class FA2
@@ -183,7 +174,7 @@ namespace fans
     {
         static void Main(string[] args)
         {
-            String s = "101111";
+            String s = "10";
             FA1 fa1 = new FA1();
             bool? result1 = fa1.Run(s);
             Console.WriteLine(result1);
